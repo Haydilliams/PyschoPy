@@ -1,57 +1,12 @@
-# PyschoPy
+All credit to: https://github.com/jacanterbury/PsychoPy-snippets
 
-# Under the "Begin Experiment" Tab, copy and paste the following:
+To gather text input, you'll need three components.
+1) Code Component
+2) Text Component
+3) Keyboard Componenet
 
-inputText = ""
-
-# Under the "Begin Routine" Tab, copy and paste the following:
-
-theseKeys=""
-shift_flag = False
-time_limit = True
-text_3.alignHoriz ='left'
-
-# Under the "Each Frame" Tab, copy and paste the following:
-
-n= len(theseKeys)
-
-i = 0
-
-while i < n:
-
-    if theseKeys[i] == 'return':
-        # pressing RETURN means time to stop
-        continueRoutine = False
-        break
-
-    elif theseKeys[i] == 'backspace':
-        inputText = inputText[:-1]  # lose the final character
-        i = i + 1
-
-    elif theseKeys[i] == 'space':
-        inputText += ' '
-        i = i + 1
-
-    elif theseKeys[i] in ['lshift', 'rshift']:
-        shift_flag = True
-        i = i + 1
-
-    else:
-        if len(theseKeys[i]) == 1:
-            # we only have 1 char so should be a normal key, 
-            # otherwise it might be 'ctrl' or similar so ignore it
-            if shift_flag:
-                inputText += chr( ord(theseKeys[i]) - ord(' '))
-                shift_flag = False
-            else:
-                inputText += theseKeys[i]
-
-        i = i + 1
-        
-# Under the "Each Frame" Tab, copy and paste the following:
-# This stores the final text tring in the results
-
-thisExp.addData('inputText', inputText) 
-inputText="" 
-
+1) For what goes in the code component, see the other file
+2) The Text Component can display any additional information, but in order to display the text gathered by the user, you must insert:
+$(inputText) .
+3) The keyboard component should accept all keys, and have the following boxes checked: discard previous, and sync RT with screen
 
