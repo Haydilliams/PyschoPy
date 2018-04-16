@@ -14,9 +14,9 @@ text_3.alignHoriz ='left'
 # Under the "Each Frame" Tab, copy and paste the following:
 
 n= len(theseKeys)
+
 i = 0
 
-if timeLimit && 
 while i < n:
 
     if theseKeys[i] == 'return':
