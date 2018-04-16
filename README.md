@@ -13,7 +13,6 @@ text_3.alignHoriz ='left'
 
 # Under the "Each Frame" Tab, copy and paste the following:
 
-# BEGIN COPYING
 n= len(theseKeys)
 i = 0
 
@@ -49,10 +48,9 @@ while i < n:
 
         i = i + 1
         
-# END COPYING
-
 # Under the "Each Frame" Tab, copy and paste the following:
-# let's store the final text string into the results finle...
+# This stores the final text tring in the results
+
 thisExp.addData('inputText', inputText) 
 inputText="" 
 
